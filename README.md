@@ -77,8 +77,8 @@ Digunakan untuk aksi yang MENGUBAH data di server (metode `POST`, `PATCH`, `PUT`
 2. Buat file `.env` dan isi kredensial database:
    ```env
    DB_HOST=localhost
-   DB_USER=nama_user_mac_kamu
-   DB_PASSWORD=
+   DB_USER=nama_user_postgree_kamu
+   DB_PASSWORD=password_postgree_kamu(kalo gak ada kosongin aja)
    DB_NAME=tasklist_db
    DB_PORT=5432
    PORT=8080
