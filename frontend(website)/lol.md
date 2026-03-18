@@ -1,1 +1,0 @@
-ngerjain backend dulu

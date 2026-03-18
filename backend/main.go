@@ -5,6 +5,7 @@ import(
 	"tasklist-backend/models"
 	"tasklist-backend/routes"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,7 +17,8 @@ func main(){
 
 	r := gin.Default()
 
-	routes.SetupRoutes(r)
+	r.Use(cors.Default())
 
+	routes.SetupRoutes(r)
 	r.Run()
 }
