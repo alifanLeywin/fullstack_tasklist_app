@@ -72,13 +72,36 @@ Digunakan untuk aksi yang MENGUBAH data di server (metode `POST`, `PATCH`, `PUT`
 1. Buka PostgreSQL (via DataGrip atau pgAdmin).
 2. Buat database baru bernama `tasklist_db`.
 
+
 ### 2. Jalankan Backend
 1. Buka terminal, masuk ke folder `backend`: `cd backend`
 2. Buat file `.env` dan isi kredensial database:
    ```env
    DB_HOST=localhost
    DB_USER=nama_user_postgree_kamu
-   DB_PASSWORD=password_postgree_kamu(kalo gak ada kosongin aja)
+   DB_PASSWORD=password_postgree_kamu
    DB_NAME=tasklist_db
    DB_PORT=5432
    PORT=8080
+   ```
+3. Unduh *dependencies* dan jalankan:
+   ```bash
+   go mod tidy
+   go run main.go
+   ```
+   *(Server akan otomatis membuat tabel dan berjalan di `http://localhost:8080`)*
+
+### 3. Jalankan Frontend
+1. Buka terminal baru, masuk ke folder `frontend`: `cd frontend`
+2. Install *dependencies*:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+3. Jalankan Vite *development server*:
+   ```bash
+   npm run dev
+   ```
+   *(Aplikasi akan terbuka di `http://localhost:5173`)*
+```
+
+---
